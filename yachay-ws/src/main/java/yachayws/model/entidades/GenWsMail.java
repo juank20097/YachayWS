@@ -1,6 +1,7 @@
 package yachayws.model.entidades;
 
 import java.io.Serializable;
+
 import javax.persistence.*;
 
 
@@ -32,6 +33,9 @@ public class GenWsMail implements Serializable {
 
 	@Column(name="mail_pwd_resp")
 	private String mailPwdResp;
+	
+	@Column(name="mai_descripcion")
+	private String maiDescripcion;
 
 	public GenWsMail() {
 	}
@@ -50,6 +54,14 @@ public class GenWsMail implements Serializable {
 
 	public void setMaiEstado(String maiEstado) {
 		this.maiEstado = maiEstado;
+	}
+	
+	public String getMaiDescripcion() {
+		return this.maiDescripcion;
+	}
+
+	public void setMaiDescripcion(String maiDescripcion) {
+		this.maiDescripcion = maiDescripcion;
 	}
 
 	public String getMaiPassword() {

@@ -2,7 +2,6 @@ package yachayws.model.extra;
 
 import java.util.Date;
 
-
 public class PersonaExterno {
 
 	// Atributos de la clase Gen_Persona
@@ -40,6 +39,7 @@ public class PersonaExterno {
 	private String pdePaisResidencia;
 	private String pdeProvinciaNacimiento;
 	private String pdeProvinciaResidencia;
+	private Integer pdeNumHijos;
 
 	// Atributos de la clase Gen_Externo
 	private String extTipo;
@@ -61,6 +61,21 @@ public class PersonaExterno {
 	 */
 	public void setPerDni(String perDni) {
 		this.perDni = perDni;
+	}
+
+	/**
+	 * @return the pdeNumHijos
+	 */
+	public Integer getPdeNumHijos() {
+		return pdeNumHijos;
+	}
+
+	/**
+	 * @param pdeNumHijos
+	 *            the pdeNumHijos to set
+	 */
+	public void setPdeNumHijos(Integer pdeNumHijos) {
+		this.pdeNumHijos = pdeNumHijos;
 	}
 
 	/**

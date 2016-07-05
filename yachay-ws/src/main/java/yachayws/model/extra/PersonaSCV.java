@@ -40,6 +40,7 @@ public class PersonaSCV {
 	private String pdePaisResidencia;
 	private String pdeProvinciaNacimiento;
 	private String pdeProvinciaResidencia;
+	private Integer pdeNumHijos;
 
 	// Atributos de Gen_Salud
 	private String sldAlergias;
@@ -76,6 +77,21 @@ public class PersonaSCV {
 	 */
 	public void setPerDni(String perDni) {
 		this.perDni = perDni;
+	}
+
+	/**
+	 * @return the pdeNumHijos
+	 */
+	public Integer getPdeNumHijos() {
+		return pdeNumHijos;
+	}
+
+	/**
+	 * @param pdeNumHijos
+	 *            the pdeNumHijos to set
+	 */
+	public void setPdeNumHijos(Integer pdeNumHijos) {
+		this.pdeNumHijos = pdeNumHijos;
 	}
 
 	/**

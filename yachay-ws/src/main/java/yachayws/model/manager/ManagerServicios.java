@@ -218,7 +218,8 @@ public class ManagerServicios {
 				genPer.setPerTelefono(p.getPerTelefono());
 			if (p.getPerTipoDni() != null || !p.getPerTipoDni().isEmpty())
 				genPer.setPerTipoDni(p.getPerTipoDni());
-			if (p.getPerEstadoCivil() != null || !p.getPerEstadoCivil().isEmpty())
+			if (p.getPerEstadoCivil() != null
+					|| !p.getPerEstadoCivil().isEmpty())
 				genPer.setPerEstadoCivil(p.getPerEstadoCivil());
 			mngDAO.insertar(genPer);
 		} else {
@@ -392,6 +393,8 @@ public class ManagerServicios {
 				pd.setPdeNombreMadre(p.getPdeNombreMadre());
 			if (p.getPdeNacionalidadMadre() != null)
 				pd.setPdeNacionalidadMadre(p.getPdeNacionalidadMadre());
+			if (p.getPdeNumHijos() != null)
+				pd.setPdeNumHijos(p.getPdeNumHijos());
 			if (p.getPdeFechaMatrimonio() != null)
 				pd.setPdeFechaMatrimonio(sumarRestarDiasFecha(
 						p.getPdeFechaMatrimonio(), 1));
@@ -428,6 +431,8 @@ public class ManagerServicios {
 				pd.setPdeDireccion(p.getPdeDireccion());
 			if (p.getPdeCondicionCiudadana() != null)
 				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana());
+			if (p.getPdeNumHijos() != null)
+				pd.setPdeNumHijos(p.getPdeNumHijos());
 			if (p.getPdeConyuge() != null)
 				pd.setPdeConyuge(p.getPdeConyuge());
 			if (p.getPdeNombrePadre() != null)
@@ -596,6 +601,8 @@ public class ManagerServicios {
 				pd.setPdeCiudadResidencia(p.getPdeCiudadResidencia());
 			if (p.getPdeDireccion() != null)
 				pd.setPdeDireccion(p.getPdeDireccion());
+			if (p.getPdeNumHijos() != null)
+				pd.setPdeNumHijos(p.getPdeNumHijos());
 			if (p.getPdeCondicionCiudadana() != null)
 				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana());
 			if (p.getPdeConyuge() != null)
@@ -642,6 +649,8 @@ public class ManagerServicios {
 				pd.setPdeCiudadResidencia(p.getPdeCiudadResidencia());
 			if (p.getPdeDireccion() != null)
 				pd.setPdeDireccion(p.getPdeDireccion());
+			if (p.getPdeNumHijos() != null)
+				pd.setPdeNumHijos(p.getPdeNumHijos());
 			if (p.getPdeCondicionCiudadana() != null)
 				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana());
 			if (p.getPdeConyuge() != null)
