@@ -202,18 +202,18 @@ public class ManagerServicios {
 			genPer = new GenPersona();
 			genPer.setPerDni(p.getPerDni());
 			if (p.getPerApellidos() != null || !p.getPerApellidos().isEmpty())
-				genPer.setPerApellidos(p.getPerApellidos());
+				genPer.setPerApellidos(p.getPerApellidos().toUpperCase());
 			if (p.getPerCelular() != null || !p.getPerCelular().isEmpty())
 				genPer.setPerCelular(p.getPerCelular());
 			if (p.getPerCorreo() != null || !p.getPerCorreo().isEmpty())
-				genPer.setPerCorreo(p.getPerCorreo());
+				genPer.setPerCorreo(p.getPerCorreo().toLowerCase());
 			if (p.getPerFechaNacimiento() != null)
 				genPer.setPerFechaNacimiento(sumarRestarDiasFecha(
 						p.getPerFechaNacimiento(), 1));
 			if (p.getPerGenero() != null || !p.getPerGenero().isEmpty())
 				genPer.setPerGenero(p.getPerGenero());
 			if (p.getPerNombres() != null || !p.getPerNombres().isEmpty())
-				genPer.setPerNombres(p.getPerNombres());
+				genPer.setPerNombres(p.getPerNombres().toUpperCase());
 			if (p.getPerTelefono() != null || !p.getPerTelefono().isEmpty())
 				genPer.setPerTelefono(p.getPerTelefono());
 			if (p.getPerTipoDni() != null || !p.getPerTipoDni().isEmpty())
@@ -224,18 +224,18 @@ public class ManagerServicios {
 			mngDAO.insertar(genPer);
 		} else {
 			if (p.getPerApellidos() != null)
-				genPer.setPerApellidos(p.getPerApellidos());
+				genPer.setPerApellidos(p.getPerApellidos().toUpperCase());
 			if (p.getPerCelular() != null)
 				genPer.setPerCelular(p.getPerCelular());
 			if (p.getPerCorreo() != null)
-				genPer.setPerCorreo(p.getPerCorreo());
+				genPer.setPerCorreo(p.getPerCorreo().toLowerCase());
 			if (p.getPerFechaNacimiento() != null)
 				genPer.setPerFechaNacimiento(sumarRestarDiasFecha(
 						p.getPerFechaNacimiento(), 1));
 			if (p.getPerGenero() != null)
 				genPer.setPerGenero(p.getPerGenero());
 			if (p.getPerNombres() != null)
-				genPer.setPerNombres(p.getPerNombres());
+				genPer.setPerNombres(p.getPerNombres().toUpperCase());
 			if (p.getPerTelefono() != null)
 				genPer.setPerTelefono(p.getPerTelefono());
 			if (p.getPerTipoDni() != null)
@@ -274,7 +274,7 @@ public class ManagerServicios {
 			d = new GenSalud();
 			d.setPerDni(p.getPerDni());
 			if (p.getSldAlergias() != null)
-				d.setSldAlergias(p.getSldAlergias());
+				d.setSldAlergias(p.getSldAlergias().toUpperCase());
 			if (p.getSldRealizaEjercicio() != null)
 				d.setSldRealizaEjercicio(p.getSldRealizaEjercicio());
 			if (p.getSldVegetariano() != null)
@@ -282,38 +282,38 @@ public class ManagerServicios {
 			if (p.getSldAltura() != null)
 				d.setSldAltura(p.getSldAltura());
 			if (p.getSldAsegurado() != null)
-				d.setSldAsegurado(p.getSldAsegurado());
+				d.setSldAsegurado(p.getSldAsegurado().toUpperCase());
 			if (p.getSldConsumeAlcohol() != null)
-				d.setSldConsumeAlcohol(p.getSldConsumeAlcohol());
+				d.setSldConsumeAlcohol(p.getSldConsumeAlcohol().toUpperCase());
 			if (p.getSldConsumeTabaco() != null)
-				d.setSldConsumeTabaco(p.getSldConsumeTabaco());
+				d.setSldConsumeTabaco(p.getSldConsumeTabaco().toUpperCase());
 			if (p.getSldGrupoSanguineo() != null)
-				d.setSldGrupoSanguineo(p.getSldGrupoSanguineo());
+				d.setSldGrupoSanguineo(p.getSldGrupoSanguineo().toUpperCase());
 			if (p.getSldCarnetConadies() != null)
-				d.setSldCarnetConadies(p.getSldCarnetConadies());
+				d.setSldCarnetConadies(p.getSldCarnetConadies().toUpperCase());
 			if (p.getSldDiscapacidadGrado() != null)
-				d.setSldDiscapacidadGrado(p.getSldDiscapacidadGrado());
+				d.setSldDiscapacidadGrado(p.getSldDiscapacidadGrado().toUpperCase());
 			if (p.getSldDiscapacidadTipo() != null)
-				d.setSldDiscapacidadTipo(p.getSldDiscapacidadTipo());
+				d.setSldDiscapacidadTipo(p.getSldDiscapacidadTipo().toUpperCase());
 			if (p.getSldPeso() != null)
 				d.setSldPeso(p.getSldPeso());
 			if (p.getSldPresion() != null)
-				d.setSldPresion(p.getSldPresion());
+				d.setSldPresion(p.getSldPresion().toUpperCase());
 			if (p.getSldNivelAzucar() != null)
-				d.setSldNivelAzucar(p.getSldNivelAzucar());
+				d.setSldNivelAzucar(p.getSldNivelAzucar().toUpperCase());
 			if (p.getSldRealizaEjercicio() != null)
 				d.setSldRealizaEjercicio(p.getSldRealizaEjercicio());
 			if (p.getSldPeriodicidadEjercicio() != null)
-				d.setSldPeriodicidadEjercicio(p.getSldPeriodicidadEjercicio());
+				d.setSldPeriodicidadEjercicio(p.getSldPeriodicidadEjercicio().toUpperCase());
 			if (p.getSldMedicamentos() != null)
-				d.setSldMedicamentos(p.getSldMedicamentos());
+				d.setSldMedicamentos(p.getSldMedicamentos().toUpperCase());
 			if (p.getSldFrecuenciaConsumoMedicame() != null)
 				d.setSldFrecuenciaConsumoMedicame(p
-						.getSldFrecuenciaConsumoMedicame());
+						.getSldFrecuenciaConsumoMedicame().toUpperCase());
 			mngDAO.insertar(d);
 		} else {
 			if (p.getSldAlergias() != null)
-				d.setSldAlergias(p.getSldAlergias());
+				d.setSldAlergias(p.getSldAlergias().toUpperCase());
 			if (p.getSldRealizaEjercicio() != null)
 				d.setSldRealizaEjercicio(p.getSldRealizaEjercicio());
 			if (p.getSldVegetariano() != null)
@@ -321,34 +321,34 @@ public class ManagerServicios {
 			if (p.getSldAltura() != null)
 				d.setSldAltura(p.getSldAltura());
 			if (p.getSldAsegurado() != null)
-				d.setSldAsegurado(p.getSldAsegurado());
+				d.setSldAsegurado(p.getSldAsegurado().toUpperCase());
 			if (p.getSldConsumeAlcohol() != null)
-				d.setSldConsumeAlcohol(p.getSldConsumeAlcohol());
+				d.setSldConsumeAlcohol(p.getSldConsumeAlcohol().toUpperCase());
 			if (p.getSldConsumeTabaco() != null)
-				d.setSldConsumeTabaco(p.getSldConsumeTabaco());
+				d.setSldConsumeTabaco(p.getSldConsumeTabaco().toUpperCase());
 			if (p.getSldGrupoSanguineo() != null)
-				d.setSldGrupoSanguineo(p.getSldGrupoSanguineo());
+				d.setSldGrupoSanguineo(p.getSldGrupoSanguineo().toUpperCase());
 			if (p.getSldCarnetConadies() != null)
-				d.setSldCarnetConadies(p.getSldCarnetConadies());
+				d.setSldCarnetConadies(p.getSldCarnetConadies().toUpperCase());
 			if (p.getSldDiscapacidadGrado() != null)
-				d.setSldDiscapacidadGrado(p.getSldDiscapacidadGrado());
+				d.setSldDiscapacidadGrado(p.getSldDiscapacidadGrado().toUpperCase());
 			if (p.getSldDiscapacidadTipo() != null)
-				d.setSldDiscapacidadTipo(p.getSldDiscapacidadTipo());
+				d.setSldDiscapacidadTipo(p.getSldDiscapacidadTipo().toUpperCase());
 			if (p.getSldPeso() != null)
 				d.setSldPeso(p.getSldPeso());
 			if (p.getSldPresion() != null)
-				d.setSldPresion(p.getSldPresion());
+				d.setSldPresion(p.getSldPresion().toUpperCase());
 			if (p.getSldNivelAzucar() != null)
-				d.setSldNivelAzucar(p.getSldNivelAzucar());
+				d.setSldNivelAzucar(p.getSldNivelAzucar().toUpperCase());
 			if (p.getSldRealizaEjercicio() != null)
 				d.setSldRealizaEjercicio(p.getSldRealizaEjercicio());
 			if (p.getSldPeriodicidadEjercicio() != null)
-				d.setSldPeriodicidadEjercicio(p.getSldPeriodicidadEjercicio());
+				d.setSldPeriodicidadEjercicio(p.getSldPeriodicidadEjercicio().toUpperCase());
 			if (p.getSldMedicamentos() != null)
-				d.setSldMedicamentos(p.getSldMedicamentos());
+				d.setSldMedicamentos(p.getSldMedicamentos().toUpperCase());
 			if (p.getSldFrecuenciaConsumoMedicame() != null)
 				d.setSldFrecuenciaConsumoMedicame(p
-						.getSldFrecuenciaConsumoMedicame());
+						.getSldFrecuenciaConsumoMedicame().toUpperCase());
 			mngDAO.actualizar(d);
 		}
 	}
@@ -372,7 +372,7 @@ public class ManagerServicios {
 			if (p.getPdeCiudadNacimiento() != null)
 				pd.setPdeCiudadNacimiento(p.getPdeCiudadNacimiento());
 			if (p.getPdeLugarNacimiento() != null)
-				pd.setPdeLugarNacimiento(p.getPdeLugarNacimiento());
+				pd.setPdeLugarNacimiento(p.getPdeLugarNacimiento().toUpperCase());
 			if (p.getPdePaisResidencia() != null)
 				pd.setPdePaisResidencia(p.getPdePaisResidencia());
 			if (p.getPdeProvinciaResidencia() != null)
@@ -380,17 +380,17 @@ public class ManagerServicios {
 			if (p.getPdeCiudadResidencia() != null)
 				pd.setPdeCiudadResidencia(p.getPdeCiudadResidencia());
 			if (p.getPdeDireccion() != null)
-				pd.setPdeDireccion(p.getPdeDireccion());
+				pd.setPdeDireccion(p.getPdeDireccion().toUpperCase());
 			if (p.getPdeCondicionCiudadana() != null)
-				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana());
+				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana().toUpperCase());
 			if (p.getPdeConyuge() != null)
-				pd.setPdeConyuge(p.getPdeConyuge());
+				pd.setPdeConyuge(p.getPdeConyuge().toUpperCase());
 			if (p.getPdeNombrePadre() != null)
-				pd.setPdeNombrePadre(p.getPdeNombrePadre());
+				pd.setPdeNombrePadre(p.getPdeNombrePadre().toUpperCase());
 			if (p.getPdeNacionalidadPadre() != null)
 				pd.setPdeNacionalidadPadre(p.getPdeNacionalidadPadre());
 			if (p.getPdeNombreMadre() != null)
-				pd.setPdeNombreMadre(p.getPdeNombreMadre());
+				pd.setPdeNombreMadre(p.getPdeNombreMadre().toUpperCase());
 			if (p.getPdeNacionalidadMadre() != null)
 				pd.setPdeNacionalidadMadre(p.getPdeNacionalidadMadre());
 			if (p.getPdeNumHijos() != null)
@@ -399,28 +399,28 @@ public class ManagerServicios {
 				pd.setPdeFechaMatrimonio(sumarRestarDiasFecha(
 						p.getPdeFechaMatrimonio(), 1));
 			if (p.getPdeInscripcionDefuncion() != null)
-				pd.setPdeInscripcionDefuncion(p.getPdeInscripcionDefuncion());
+				pd.setPdeInscripcionDefuncion(p.getPdeInscripcionDefuncion().toUpperCase());
 			if (p.getPdeFechaDefuncion() != null)
 				pd.setPdeFechaDefuncion(sumarRestarDiasFecha(
 						p.getPdeFechaDefuncion(), 1));
 			if (p.getPdeObservacion() != null)
-				pd.setPdeObservacion(p.getPdeObservacion());
+				pd.setPdeObservacion(p.getPdeObservacion().toUpperCase());
 			if (p.getPdeEmergContactoId() != null)
 				pd.setPdeEmergContactoId(p.getPdeEmergContactoId());
 			if (p.getPdeEmergContactoTelefono() != null)
 				pd.setPdeEmergContactoTelefono(p.getPdeEmergContactoTelefono());
 			if (p.getPdeEmergContactoNombres() != null)
-				pd.setPdeEmergContactoNombres(p.getPdeEmergContactoNombres());
+				pd.setPdeEmergContactoNombres(p.getPdeEmergContactoNombres().toUpperCase());
 			mngDAO.insertar(pd);
 		} else {
 			if (p.getPdePaisNacimiento() != null)
 				pd.setPdePaisNacimiento(p.getPdePaisNacimiento());
 			if (p.getPdeProvinciaNacimiento() != null)
 				pd.setPdeProvinciaNacimiento(p.getPdeProvinciaNacimiento());
-			if (p.getPdeProvinciaNacimiento() != null)
-				pd.setPdeCiudadNacimiento(p.getPdeProvinciaNacimiento());
+			if (p.getPdeCiudadNacimiento() != null)
+				pd.setPdeCiudadNacimiento(p.getPdeCiudadNacimiento());
 			if (p.getPdeLugarNacimiento() != null)
-				pd.setPdeLugarNacimiento(p.getPdeLugarNacimiento());
+				pd.setPdeLugarNacimiento(p.getPdeLugarNacimiento().toUpperCase());
 			if (p.getPdePaisResidencia() != null)
 				pd.setPdePaisResidencia(p.getPdePaisResidencia());
 			if (p.getPdeProvinciaResidencia() != null)
@@ -428,37 +428,37 @@ public class ManagerServicios {
 			if (p.getPdeCiudadResidencia() != null)
 				pd.setPdeCiudadResidencia(p.getPdeCiudadResidencia());
 			if (p.getPdeDireccion() != null)
-				pd.setPdeDireccion(p.getPdeDireccion());
+				pd.setPdeDireccion(p.getPdeDireccion().toUpperCase());
 			if (p.getPdeCondicionCiudadana() != null)
-				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana());
-			if (p.getPdeNumHijos() != null)
-				pd.setPdeNumHijos(p.getPdeNumHijos());
+				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana().toUpperCase());
 			if (p.getPdeConyuge() != null)
-				pd.setPdeConyuge(p.getPdeConyuge());
+				pd.setPdeConyuge(p.getPdeConyuge().toUpperCase());
 			if (p.getPdeNombrePadre() != null)
-				pd.setPdeNombrePadre(p.getPdeNombrePadre());
+				pd.setPdeNombrePadre(p.getPdeNombrePadre().toUpperCase());
 			if (p.getPdeNacionalidadPadre() != null)
 				pd.setPdeNacionalidadPadre(p.getPdeNacionalidadPadre());
 			if (p.getPdeNombreMadre() != null)
-				pd.setPdeNombreMadre(p.getPdeNombreMadre());
+				pd.setPdeNombreMadre(p.getPdeNombreMadre().toUpperCase());
 			if (p.getPdeNacionalidadMadre() != null)
 				pd.setPdeNacionalidadMadre(p.getPdeNacionalidadMadre());
+			if (p.getPdeNumHijos() != null)
+				pd.setPdeNumHijos(p.getPdeNumHijos());
 			if (p.getPdeFechaMatrimonio() != null)
 				pd.setPdeFechaMatrimonio(sumarRestarDiasFecha(
 						p.getPdeFechaMatrimonio(), 1));
 			if (p.getPdeInscripcionDefuncion() != null)
-				pd.setPdeInscripcionDefuncion(p.getPdeInscripcionDefuncion());
+				pd.setPdeInscripcionDefuncion(p.getPdeInscripcionDefuncion().toUpperCase());
 			if (p.getPdeFechaDefuncion() != null)
 				pd.setPdeFechaDefuncion(sumarRestarDiasFecha(
 						p.getPdeFechaDefuncion(), 1));
 			if (p.getPdeObservacion() != null)
-				pd.setPdeObservacion(p.getPdeObservacion());
+				pd.setPdeObservacion(p.getPdeObservacion().toUpperCase());
 			if (p.getPdeEmergContactoId() != null)
 				pd.setPdeEmergContactoId(p.getPdeEmergContactoId());
 			if (p.getPdeEmergContactoTelefono() != null)
 				pd.setPdeEmergContactoTelefono(p.getPdeEmergContactoTelefono());
 			if (p.getPdeEmergContactoNombres() != null)
-				pd.setPdeEmergContactoNombres(p.getPdeEmergContactoNombres());
+				pd.setPdeEmergContactoNombres(p.getPdeEmergContactoNombres().toUpperCase());
 			mngDAO.actualizar(pd);
 		}
 	}
@@ -476,23 +476,23 @@ public class ManagerServicios {
 					.getPerDni());
 			PersonaSCV persona = new PersonaSCV();
 			persona.setPerDni(genPer.getPerDni());
-			persona.setPerApellidos(genPer.getPerApellidos());
+			persona.setPerApellidos(genPer.getPerApellidos().toUpperCase());
 			persona.setPerCelular(genPer.getPerCelular());
-			persona.setPerCorreo(genPer.getPerCorreo());
+			persona.setPerCorreo(genPer.getPerCorreo().toLowerCase());
 			persona.setPerFechaNacimiento(genPer.getPerFechaNacimiento());
 			persona.setPerGenero(genPer.getPerGenero());
-			persona.setPerNombres(genPer.getPerNombres());
+			persona.setPerNombres(genPer.getPerNombres().toUpperCase());
 			persona.setPerTelefono(genPer.getPerTelefono());
-			persona.setPdeDireccion(pd.getPdeDireccion());
+			persona.setPdeDireccion(pd.getPdeDireccion().toUpperCase());
 			persona.setPdePaisNacimiento(pd.getPdePaisNacimiento());
 			GenSalud discapacidad = findGenSaludByPerDNI(perDni);
 			if (discapacidad != null) {
 				persona.setSldDiscapacidadTipo(discapacidad
-						.getSldDiscapacidadTipo());
+						.getSldDiscapacidadTipo().toUpperCase());
 				persona.setSldDiscapacidadGrado(discapacidad
-						.getSldDiscapacidadGrado());
+						.getSldDiscapacidadGrado().toUpperCase());
 				persona.setSldCarnetConadies(discapacidad
-						.getSldCarnetConadies());
+						.getSldCarnetConadies().toUpperCase());
 			}
 			return persona;
 		} catch (Exception e) {
@@ -530,18 +530,18 @@ public class ManagerServicios {
 			genPer = new GenPersona();
 			genPer.setPerDni(p.getPerDni());
 			if (p.getPerApellidos() != null)
-				genPer.setPerApellidos(p.getPerApellidos());
+				genPer.setPerApellidos(p.getPerApellidos().toUpperCase());
 			if (p.getPerCelular() != null)
 				genPer.setPerCelular(p.getPerCelular());
 			if (p.getPerCorreo() != null)
-				genPer.setPerCorreo(p.getPerCorreo());
+				genPer.setPerCorreo(p.getPerCorreo().toLowerCase());
 			if (p.getPerFechaNacimiento() != null)
 				genPer.setPerFechaNacimiento(sumarRestarDiasFecha(
 						p.getPerFechaNacimiento(), 1));
 			if (p.getPerGenero() != null)
 				genPer.setPerGenero(p.getPerGenero());
 			if (p.getPerNombres() != null)
-				genPer.setPerNombres(p.getPerNombres());
+				genPer.setPerNombres(p.getPerNombres().toUpperCase());
 			if (p.getPerTelefono() != null)
 				genPer.setPerTelefono(p.getPerTelefono());
 			if (p.getPerTipoDni() != null)
@@ -551,18 +551,18 @@ public class ManagerServicios {
 			mngDAO.insertar(genPer);
 		} else {
 			if (p.getPerApellidos() != null)
-				genPer.setPerApellidos(p.getPerApellidos());
+				genPer.setPerApellidos(p.getPerApellidos().toUpperCase());
 			if (p.getPerCelular() != null)
 				genPer.setPerCelular(p.getPerCelular());
 			if (p.getPerCorreo() != null)
-				genPer.setPerCorreo(p.getPerCorreo());
+				genPer.setPerCorreo(p.getPerCorreo().toLowerCase());
 			if (p.getPerFechaNacimiento() != null)
 				genPer.setPerFechaNacimiento(sumarRestarDiasFecha(
 						p.getPerFechaNacimiento(), 1));
 			if (p.getPerGenero() != null)
 				genPer.setPerGenero(p.getPerGenero());
 			if (p.getPerNombres() != null)
-				genPer.setPerNombres(p.getPerNombres());
+				genPer.setPerNombres(p.getPerNombres().toUpperCase());
 			if (p.getPerTelefono() != null)
 				genPer.setPerTelefono(p.getPerTelefono());
 			if (p.getPerTipoDni() != null)
@@ -592,7 +592,7 @@ public class ManagerServicios {
 			if (p.getPdeProvinciaNacimiento() != null)
 				pd.setPdeCiudadNacimiento(p.getPdeProvinciaNacimiento());
 			if (p.getPdeLugarNacimiento() != null)
-				pd.setPdeLugarNacimiento(p.getPdeLugarNacimiento());
+				pd.setPdeLugarNacimiento(p.getPdeLugarNacimiento().toUpperCase());
 			if (p.getPdePaisResidencia() != null)
 				pd.setPdePaisResidencia(p.getPdePaisResidencia());
 			if (p.getPdeProvinciaResidencia() != null)
@@ -600,37 +600,37 @@ public class ManagerServicios {
 			if (p.getPdeCiudadResidencia() != null)
 				pd.setPdeCiudadResidencia(p.getPdeCiudadResidencia());
 			if (p.getPdeDireccion() != null)
-				pd.setPdeDireccion(p.getPdeDireccion());
+				pd.setPdeDireccion(p.getPdeDireccion().toUpperCase());
 			if (p.getPdeNumHijos() != null)
 				pd.setPdeNumHijos(p.getPdeNumHijos());
 			if (p.getPdeCondicionCiudadana() != null)
-				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana());
+				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana().toUpperCase());
 			if (p.getPdeConyuge() != null)
-				pd.setPdeConyuge(p.getPdeConyuge());
+				pd.setPdeConyuge(p.getPdeConyuge().toUpperCase());
 			if (p.getPdeNombrePadre() != null)
-				pd.setPdeNombrePadre(p.getPdeNombrePadre());
+				pd.setPdeNombrePadre(p.getPdeNombrePadre().toUpperCase());
 			if (p.getPdeNacionalidadPadre() != null)
 				pd.setPdeNacionalidadPadre(p.getPdeNacionalidadPadre());
 			if (p.getPdeNombreMadre() != null)
-				pd.setPdeNombreMadre(p.getPdeNombreMadre());
+				pd.setPdeNombreMadre(p.getPdeNombreMadre().toUpperCase());
 			if (p.getPdeNacionalidadMadre() != null)
 				pd.setPdeNacionalidadMadre(p.getPdeNacionalidadMadre());
 			if (p.getPdeFechaMatrimonio() != null)
 				pd.setPdeFechaMatrimonio(sumarRestarDiasFecha(
 						p.getPdeFechaMatrimonio(), 1));
 			if (p.getPdeInscripcionDefuncion() != null)
-				pd.setPdeInscripcionDefuncion(p.getPdeInscripcionDefuncion());
+				pd.setPdeInscripcionDefuncion(p.getPdeInscripcionDefuncion().toUpperCase());
 			if (p.getPdeFechaDefuncion() != null)
 				pd.setPdeFechaDefuncion(sumarRestarDiasFecha(
 						p.getPdeFechaDefuncion(), 1));
 			if (p.getPdeObservacion() != null)
-				pd.setPdeObservacion(p.getPdeObservacion());
+				pd.setPdeObservacion(p.getPdeObservacion().toUpperCase());
 			if (p.getPdeEmergContactoId() != null)
 				pd.setPdeEmergContactoId(p.getPdeEmergContactoId());
 			if (p.getPdeEmergContactoTelefono() != null)
 				pd.setPdeEmergContactoTelefono(p.getPdeEmergContactoTelefono());
 			if (p.getPdeEmergContactoNombres() != null)
-				pd.setPdeEmergContactoNombres(p.getPdeEmergContactoNombres());
+				pd.setPdeEmergContactoNombres(p.getPdeEmergContactoNombres().toUpperCase());
 			mngDAO.insertar(pd);
 		} else {
 			if (p.getPdePaisNacimiento() != null)
@@ -640,7 +640,7 @@ public class ManagerServicios {
 			if (p.getPdeProvinciaNacimiento() != null)
 				pd.setPdeCiudadNacimiento(p.getPdeProvinciaNacimiento());
 			if (p.getPdeLugarNacimiento() != null)
-				pd.setPdeLugarNacimiento(p.getPdeLugarNacimiento());
+				pd.setPdeLugarNacimiento(p.getPdeLugarNacimiento().toUpperCase());
 			if (p.getPdePaisResidencia() != null)
 				pd.setPdePaisResidencia(p.getPdePaisResidencia());
 			if (p.getPdeProvinciaResidencia() != null)
@@ -648,37 +648,37 @@ public class ManagerServicios {
 			if (p.getPdeCiudadResidencia() != null)
 				pd.setPdeCiudadResidencia(p.getPdeCiudadResidencia());
 			if (p.getPdeDireccion() != null)
-				pd.setPdeDireccion(p.getPdeDireccion());
+				pd.setPdeDireccion(p.getPdeDireccion().toUpperCase());
 			if (p.getPdeNumHijos() != null)
 				pd.setPdeNumHijos(p.getPdeNumHijos());
 			if (p.getPdeCondicionCiudadana() != null)
-				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana());
+				pd.setPdeCondicionCiudadana(p.getPdeCondicionCiudadana().toUpperCase());
 			if (p.getPdeConyuge() != null)
-				pd.setPdeConyuge(p.getPdeConyuge());
+				pd.setPdeConyuge(p.getPdeConyuge().toUpperCase());
 			if (p.getPdeNombrePadre() != null)
-				pd.setPdeNombrePadre(p.getPdeNombrePadre());
+				pd.setPdeNombrePadre(p.getPdeNombrePadre().toUpperCase());
 			if (p.getPdeNacionalidadPadre() != null)
 				pd.setPdeNacionalidadPadre(p.getPdeNacionalidadPadre());
 			if (p.getPdeNombreMadre() != null)
-				pd.setPdeNombreMadre(p.getPdeNombreMadre());
+				pd.setPdeNombreMadre(p.getPdeNombreMadre().toUpperCase());
 			if (p.getPdeNacionalidadMadre() != null)
 				pd.setPdeNacionalidadMadre(p.getPdeNacionalidadMadre());
 			if (p.getPdeFechaMatrimonio() != null)
 				pd.setPdeFechaMatrimonio(sumarRestarDiasFecha(
 						p.getPdeFechaMatrimonio(), 1));
 			if (p.getPdeInscripcionDefuncion() != null)
-				pd.setPdeInscripcionDefuncion(p.getPdeInscripcionDefuncion());
+				pd.setPdeInscripcionDefuncion(p.getPdeInscripcionDefuncion().toUpperCase());
 			if (p.getPdeFechaDefuncion() != null)
 				pd.setPdeFechaDefuncion(sumarRestarDiasFecha(
 						p.getPdeFechaDefuncion(), 1));
 			if (p.getPdeObservacion() != null)
-				pd.setPdeObservacion(p.getPdeObservacion());
+				pd.setPdeObservacion(p.getPdeObservacion().toUpperCase());
 			if (p.getPdeEmergContactoId() != null)
 				pd.setPdeEmergContactoId(p.getPdeEmergContactoId());
 			if (p.getPdeEmergContactoTelefono() != null)
 				pd.setPdeEmergContactoTelefono(p.getPdeEmergContactoTelefono());
 			if (p.getPdeEmergContactoNombres() != null)
-				pd.setPdeEmergContactoNombres(p.getPdeEmergContactoNombres());
+				pd.setPdeEmergContactoNombres(p.getPdeEmergContactoNombres().toUpperCase());
 			mngDAO.actualizar(pd);
 		}
 	}
@@ -695,15 +695,15 @@ public class ManagerServicios {
 			genExt = new GenExterno();
 			genExt.setPerDni(p.getPerDni());
 			if (p.getExtTipo() != null)
-				genExt.setExtTipo(p.getExtTipo());
+				genExt.setExtTipo(p.getExtTipo().toUpperCase());
 			if (p.getExtReferencia() != null)
-				genExt.setExtReferencia(p.getExtReferencia());
+				genExt.setExtReferencia(p.getExtReferencia().toUpperCase());
 			mngDAO.insertar(genExt);
 		} else {
 			if (p.getExtTipo() != null)
-				genExt.setExtTipo(p.getExtTipo());
+				genExt.setExtTipo(p.getExtTipo().toUpperCase());
 			if (p.getExtReferencia() != null)
-				genExt.setExtReferencia(p.getExtReferencia());
+				genExt.setExtReferencia(p.getExtReferencia().toUpperCase());
 			mngDAO.actualizar(genExt);
 		}
 	}
