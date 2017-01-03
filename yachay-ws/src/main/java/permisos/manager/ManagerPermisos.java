@@ -21,12 +21,13 @@ public class ManagerPermisos {
 	
 	public PerRespuesta respuestaPermisos(PerPeticion appPeticion){
 		try {
-			if(!existeUsuario(appPeticion.getUsr(), appPeticion.getPwd()))
-				return new PerRespuesta("Usuario y/o contraseña incorrectos.", new ArrayList<Menu>(), "ERROR");
+			if((!existeUsuarioPorNombre(appPeticion.getUsr().trim(), appPeticion.getPwd().trim())) && (!existeUsuarioPorDni(appPeticion.getUsr().trim(), appPeticion.getPwd().trim()))){
+				return new PerRespuesta("Usuario y/o contraseÃ±a incorrectos.", new ArrayList<Menu>(), "ERROR");
+			}
 			else{
 				List<Menu> lstPermisos = menuPermisosUsuarioAplicacion(appPeticion.getUsr(), appPeticion.getApl());
 				if(lstPermisos.isEmpty())
-					return new PerRespuesta("No posee permisos para esta aplicación.", new ArrayList<Menu>(), "ERROR");
+					return new PerRespuesta("No posee permisos para esta aplicaciÃ³n.", new ArrayList<Menu>(), "ERROR");
 				else
 					return new PerRespuesta("Consulta correcta.", lstPermisos, "OK");
 			}
@@ -36,7 +37,15 @@ public class ManagerPermisos {
 		}
 	}
 	
-	private boolean existeUsuario(String usuario, String password) throws SQLException{
+	private boolean existeUsuarioPorDni(String dni, String password) throws SQLException{
+		ResultSet consulta = conn.consultaSQL("select * from app_usuario where per_id='"+dni+"' and usu_password='"+getMD5(password)+"';");
+		if(consulta.next())
+			return true;
+		else
+			return false;
+	}
+	
+	private boolean existeUsuarioPorNombre(String usuario, String password) throws SQLException{
 		ResultSet consulta = conn.consultaSQL("select * from app_usuario where usu_login='"+usuario+"' and usu_password='"+getMD5(password)+"';");
 		if(consulta.next())
 			return true;
@@ -46,7 +55,12 @@ public class ManagerPermisos {
 	
 	private List<Menu> menuPermisosUsuarioAplicacion(String usuario, String aplicacion) throws SQLException {
 		List<Menu> menuPermisos = new ArrayList<Menu>();
-		List<AppPermisos> lista = consultarPermisos(usuario, aplicacion);
+		List<AppPermisos> lista = new ArrayList<AppPermisos>();
+		lista = consultarPermisos(usuario, aplicacion);
+		if (lista.isEmpty()){
+		String nombre = existeUsuarioPorDni(usuario);
+		lista = consultarPermisos(nombre, aplicacion);
+		}
 		if(!lista.isEmpty()){
 			int contador = 0;
 			String modAnt = "";
@@ -65,6 +79,20 @@ public class ManagerPermisos {
 			}
 		}
 		return menuPermisos;
+	}
+	
+	private String existeUsuarioPorDni(String dni){
+		try {
+			ResultSet consulta = conn.consultaSQL("select * from app_usuario where per_id='"+dni+"';");
+			if(consulta.next())
+				return consulta.getString("usu_login");
+			else
+				return "ERROR";
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return "ERROR";
+		}
+		
 	}
 	
 	private List<AppPermisos> consultarPermisos(String usuario, String aplicacion) throws SQLException{
